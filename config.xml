@@ -33,5 +33,17 @@
 	<!-- Icon + Splash -->
 	<icon src="icon.png" /> <!-- 128x128 -->
 	<splash src="splash.png" /> <!-- 320x480 -->
+    
+    
+    <platform>
+    <!-- Android -->
+		<!--<icon src="icon/ldpi.png" qualifier="ldpi" />
+		<icon src="icon/mdpi.png" qualifier="mdpi" />
+		<icon src="icon/hdpi.png" qualifier="hdpi" />
+		<icon src="icon/xhdpi.png" qualifier="xhdpi" />
+		<icon src="icon/xxhdpi.png" qualifier="xxhdpi" />
+		<icon src="icon/xxxhdpi.png" qualifier="xxxhdpi" /> -->
+        <icon src="icon.png" qualifier="anydpi" />
+	</platform>
 
 </widget>
