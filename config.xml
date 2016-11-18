@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	config.xml reference: http://docs.phonegap.com/phonegap-build/configuring/
+	-->
+<!--
+	CHANGE id, version (all platforms) and versionCode (Android only)
+	For Avans: id must be "nl.avans.aii.cmd.?????" where ????? is your app id
+	-->
+<widget
+	xmlns       = "http://www.w3.org/ns/widgets"
+	xmlns:gap   = "http://phonegap.com/ns/1.0"
+	id          = "nl.avans.aii.cmd.SpookyApp"
+	version     = "1.0.0"
+	versionCode = "100"
+>
+
+<!--CHANGE THIS-->
+	<name>SpookyApp</name>
+
+<!--CHANGE THIS-->
+	<description>The spookiest app ever made.</description>
+
+<!--CHANGE THIS, all 3-->
+	<author href="http://www.avans.nl" email="imbaaije@avans.nl">
+		Ion Baaijens
+	</author>
+
+	<!-- Permissions:
+		If you do not want any permissions to be added to your app, add the following tag to your config.xml; you will still have the INTERNET permission on your app, which PhoneGap requires.
+	-->
+	<preference name="permissions" value="none"/>
+
+	<!-- Icon + Splash -->
+	<icon src="icon.png" /> <!-- 128x128 -->
+	<splash src="splash.png" /> <!-- 320x480 -->
+
+</widget>
