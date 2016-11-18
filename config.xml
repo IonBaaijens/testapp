@@ -37,12 +37,12 @@
     
     <platform>
     <!-- Android -->
-		<!--<icon src="icon/ldpi.png" qualifier="ldpi" />
-		<icon src="icon/mdpi.png" qualifier="mdpi" />
-		<icon src="icon/hdpi.png" qualifier="hdpi" />
-		<icon src="icon/xhdpi.png" qualifier="xhdpi" />
-		<icon src="icon/xxhdpi.png" qualifier="xxhdpi" />
-		<icon src="icon/xxxhdpi.png" qualifier="xxxhdpi" /> -->
+		<icon src="icon.png" qualifier="ldpi" />
+		<icon src="icon.png" qualifier="mdpi" />
+		<icon src="icon.png" qualifier="hdpi" />
+		<icon src="icon.png" qualifier="xhdpi" />
+		<icon src="icon.png" qualifier="xxhdpi" />
+		<icon src="icon.png" qualifier="xxxhdpi" />
         <icon src="icon.png" qualifier="anydpi" />
 	</platform>
 
