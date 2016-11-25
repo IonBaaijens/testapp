@@ -8,13 +8,17 @@
 	versionCode = "100"
 >
 
-	<name>SpookyApp</name>
+	<name>Spooky App</name>
     
 	<description>The spookiest app ever made.</description>
+
+	<author href="http://www.avans.nl" email="imbaaije@avans.nl">
+		Ion Baaijens
+	</author>
     
 	<preference name="permissions" value="none"/>
 
-	<icon src="icon.png" />
-	<splash src="splash.png" />
+	<icon src="icon.png" /> <!-- 128x128 -->
+	<splash src="splash.png" /> <!-- 320x480 -->
 
 </widget>
