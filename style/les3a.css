@@ -21,13 +21,12 @@ section{
 	display: block;
 }
 .hidePage{
-	display: none;wadaw
+	display: none;
 }
 
 /* Navigation */
 nav{
 	position: fixed;
-	//bottom: 0;
 	width: 100%;
 	height: 50px;
 }
@@ -48,18 +47,18 @@ button{
 }
 
 button.up{
-    background-image: url("../img/hamburger.png");
+    background-color: grey;
 }
 
 button.down{
-    background-image: url("../img/hamburger2.png");
+    background-color: dimgrey;
 }
 
 /* Content */
 h1{
-    margin: 0vh 2vw;
+    margin: 8px 2vw;
 	font-family: sans-serif;
-	font-size: 9vmin;
+	font-size: 30px;
 	text-align: center;
 	color: white;
 }
