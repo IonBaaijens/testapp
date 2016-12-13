@@ -6,7 +6,7 @@
 	padding: 0;
 }
 body{
-	background-color: orange;
+	background-color: grey;
 }
 
 /* Pages */
@@ -27,7 +27,7 @@ section{
 /* Navigation */
 nav{
 	position: fixed;
-	bottom: 0;
+	//bottom: 0;
 	width: 100vw;
 	height: 10vh;
 }
@@ -44,7 +44,7 @@ button{
 	border-right: 1px solid blue;
 	height: 10vh;
     width: 100px;
-	//float: left;
+	float: left;
 }
 
 #menu{
@@ -61,9 +61,9 @@ button.down{
 
 /* Content */
 h1{
-    margin: 2vh 2vw;
+    margin: 0vh 2vw;
 	font-family: sans-serif;
-	font-size: 10vmin;
+	font-size: 9vmin;
 	text-align: center;
-	color: blue;
+	color: white;
 }
