@@ -21,7 +21,7 @@ section{
 	display: block;
 }
 .hidePage{
-	display: none;
+	display: none;wadaw
 }
 
 /* Navigation */
@@ -31,30 +31,30 @@ nav{
 	width: 100vw;
 	height: 10vh;
 }
+
 button{
 	display: block;
 	background-repeat: no-repeat;
 	background-position: center;
-    background-size: 10vh;
+    --background-size: 10vh;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	border-top: 1px solid blue;
 	border-right: 1px solid blue;
 	height: 10vh;
-	width: 50vw;
-	float: left;
+    width: 100px;
+	//float: left;
 }
-#btn1{
-	background-image: url("../img/iconhome.svg");
+
+#menu{
+	background-image: url("../img/hamburger.png");
 }
-#btn2{
-	border-right: none;
-	background-image: url("../img/iconpage.svg");
-}
+
 button.up{
 	background-color: orange;
 }
+
 button.down{
 	background-color: grey;
 }
