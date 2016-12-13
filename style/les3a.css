@@ -28,22 +28,18 @@ section{
 nav{
 	position: fixed;
 	//bottom: 0;
-	width: 100vw;
-	height: 10vh;
+	width: 100%;
+	height: 50px;
 }
 
 button{
 	display: block;
 	background-repeat: no-repeat;
 	background-position: center;
-    --background-size: 10vh;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	border-top: 1px solid blue;
-	border-right: 1px solid blue;
-	height: 10vh;
-    width: 100px;
+    background-color: grey;
+    
+	height: 50px;
+    width: 75px;
 	float: left;
 }
 
@@ -52,11 +48,11 @@ button{
 }
 
 button.up{
-	background-color: orange;
+    background-image: url("../img/hamburger.png");
 }
 
 button.down{
-	background-color: grey;
+    background-image: url("../img/hamburger2.png");
 }
 
 /* Content */
