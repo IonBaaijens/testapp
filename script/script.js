@@ -61,13 +61,13 @@ function menu_up() {
         
     }  else {
         if (cur_page == "home_page"){
-            document.getElementById("home_page").className="blurPage";
+            document.getElementById("home_page").className="hidePage";
         } else if (cur_page == "option_1_page_var"){
-            document.getElementById("option_1_page").className="blurPage";
+            document.getElementById("option_1_page").className="hidePage";
         } else if (cur_page == "option_2_page_var"){
-            document.getElementById("option_2_page").className="blurPage";
+            document.getElementById("option_2_page").className="hidePage";
         } else if (cur_page == "option_3_page_var"){
-            document.getElementById("option_3_page").className="blurPage";
+            document.getElementById("option_3_page").className="hidePage";
         }
         
         document.getElementById("menu_page").className="showPage";
