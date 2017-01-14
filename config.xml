@@ -6,6 +6,7 @@
 	id          = "nl.avans.aii.cmd.SpookyApp"
 	version     = "1.0.0"
 	versionCode = "100"
+    targetSdkVersion = "14"
 >
 
 	<name>Spooky App</name>
