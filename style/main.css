@@ -1,0 +1,162 @@
+/* General */
+*{
+	margin: 0;
+	border-style: none;
+	border-width: 0;
+	padding: 0;
+}
+
+body{
+	background-color: grey;
+}
+
+/* Pages */
+section{
+	position: fixed;
+	top:0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+}
+.showPage{
+	display: block;
+}
+.hidePage{
+	display: none;
+}
+
+.blurPage{
+    filter: blur(10px);
+}
+
+/* Navigation */
+nav{
+	position: fixed;
+	width: 100%;
+	height: 50px;
+}
+
+/* Content */
+
+button{
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+    background-color: grey;
+    
+}
+
+/* pagina titel */
+h1{
+    margin: 8px 2vw;
+	font-family: sans-serif;
+	font-size: 8vw;
+	text-align: center;
+	color: white;
+}
+
+/* pagina sub-titel */
+h2{
+    margin: 8px 2vw;
+	font-family: sans-serif;
+	font-size: 4vw;
+	text-align: center;
+    font-weight: 100;
+	color: white;
+}
+
+p{
+     margin: 20px 8vw;
+	font-family: sans-serif;
+	font-size: 4vw;
+	text-align: left;
+    font-weight: 100;
+	color: white;
+}
+
+/* menu-button */
+#menu_button{
+	background-image: url("../img/hamburger.png");
+    margin: 10px;
+    
+    height: 50px;
+    width: 75px;
+	float: left;
+}
+
+#option_1{
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    height: 50px;
+    width: 90%;
+	float: left;
+    
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: medium;
+    
+    font-size: 4vw;
+    color: white;
+}
+
+#option_2{
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    height: 50px;
+    width: 90%;
+	float: left;
+    
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: medium;
+    
+    font-size: 4vw;
+    color: white;
+}
+
+#option_3{
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    height: 50px;
+    width: 90%;
+	float: left;
+    
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: medium;
+    
+    font-size: 4vw;
+    color: white;
+}
+
+#option_4{
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    height: 50px;
+    width: 90%;
+	float: left;
+    
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: medium;
+    
+    font-size: 4vw;
+    color: white;
+}
+
+
+button.down{
+    background-color: darkgray;
+}
+
+button.up{
+    background-color: grey;
+}
