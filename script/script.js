@@ -20,6 +20,17 @@ function onDeviceReady() {
     document.getElementById('option_4').addEventListener('mousedown', option_4_down,  false);
 	document.getElementById('option_4').addEventListener('mouseup',   option_4_up, false);
     
+    document.getElementById('menu_button').addEventListener('touchstart', menu_down,  false);
+	document.getElementById('menu_button').addEventListener('touchend',   menu_up, false);
+    document.getElementById('option_1').addEventListener('touchstart', option_1_down,  false);
+	document.getElementById('option_1').addEventListener('touchend',   option_1_up, false);
+    document.getElementById('option_2').addEventListener('touchstart', option_2_down,  false);
+	document.getElementById('option_2').addEventListener('touchend',   option_2_up, false);
+    document.getElementById('option_3').addEventListener('touchstart', option_3_down,  false);
+	document.getElementById('option_3').addEventListener('touchend',   option_3_up, false);
+    document.getElementById('option_4').addEventListener('touchstart', option_4_down,  false);
+	document.getElementById('option_4').addEventListener('touchend',   option_4_up, false);
+    
     var cur_page="home";
 }
 
