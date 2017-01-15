@@ -82,7 +82,7 @@ function orientatie_down() {
 function orientatie_up() {
 	document.getElementById('orientatie').className='up';
 
-    checkBatterij();
+    checkOrientatie();
 }
 
 function menu_down() {
@@ -197,23 +197,25 @@ function option_4_up() {
     cur_page = "home_page";
 }
 
-function checkBatterij() {
-    navigator.compass.getCurrentHeading();
+function checkOrientatie() {
+    navigator.compass.getCurrentHeading(compassSuccess, compassError);
     
-    alert("Orientatie: " + heading.magneticHeading);
+    function onSucces(heading) {
+        alert("Orientatie: " + heading.magneticHeading);
+    }
 }
 
 function checkConnectie() {
     var netwerkStatus = navigator.connection.type;
  
-    var status = {};
-    status[Connection.UNKNOWN]  = 'Onbekende connectie';
-    status[Connection.WIFI]     = 'WiFi connectie';
-    status[Connection.CELL_2G]  = '2g connectie';
-    states[Connection.CELL_3G]  = '3g connectie';
-    status[Connection.CELL_4G]  = '4g connectie';
-    status[Connection.CELL]     = 'Draadloze connectie';
-    status[Connection.NONE]     = 'Geen netwerk connectie';
+    var nwstatus = {};
+    nwstatus[Connection.UNKNOWN]  = 'Onbekende connectie';
+    nwstatus[Connection.WIFI]     = 'WiFi connectie';
+    nwstatus[Connection.CELL_2G]  = '2g connectie';
+    nwstatus[Connection.CELL_3G]  = '3g connectie';
+    nwstatus[Connection.CELL_4G]  = '4g connectie';
+    nwstatus[Connection.CELL]     = 'Draadloze connectie';
+    stanwstatustus[Connection.NONE]     = 'Geen netwerk connectie';
  
-    alert('Connectie soort: ' + status[netwerkStatus]);
+    alert('Connectie soort: ' + nwstatus[netwerkStatus]);
 }
