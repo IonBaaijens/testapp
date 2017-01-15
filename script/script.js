@@ -42,12 +42,12 @@ function onDeviceReady() {
 function trillen_down() {
 	document.getElementById('trillen').className='down';
     
-    navigator.vibrate(100);
+    navigator.vibrate(1000);
 }
 
 function trillen_up() {
 	document.getElementById('trillen').className='up';
-    
+    navigator.vibrate(0);
 }
 
 function menu_down() {
