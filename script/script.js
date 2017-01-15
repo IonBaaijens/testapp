@@ -198,8 +198,8 @@ function option_4_up() {
     cur_page = "home_page";
 }
 
-function checkBatterij() {
-    document.getElementById("batteryStatusText").innerHTML = level;
+function checkBatterij(status) {
+    document.getElementById("batteryStatusText").innerHTML = status.level;
 }
 
 function checkConnectie() {
