@@ -47,7 +47,7 @@ function trillen_down() {
 
 function trillen_up() {
 	document.getElementById('trillen').className='up';
-    navigator.vibrate(0);
+    
 }
 
 function menu_down() {
