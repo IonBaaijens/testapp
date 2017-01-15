@@ -31,7 +31,7 @@ function onDeviceReady() {
     document.getElementById('option_4').addEventListener('touchstart', option_4_down,  false);
 	document.getElementById('option_4').addEventListener('touchend',   option_4_up, false);
     
-    $(document).on('batterystatus', onBatteryStatus);
+    window.addEventListener("batterystatus", onBatteryStatus, false);
 }
 
 function menu_down() {
