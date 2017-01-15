@@ -2,7 +2,8 @@ var cur_page = "home_page";
 var prev_page = "home_page";
 
 function loadScript() {
-    document.addEventListener('deviceready', onDeviceReady, false);
+    //document.addEventListener('deviceready', onDeviceReady, false);
+    onDeviceReady();
 }
 
 function onDeviceReady() {
@@ -19,6 +20,9 @@ function onDeviceReady() {
     document.getElementById('option_4').addEventListener('mousedown', option_4_down,  false);
 	document.getElementById('option_4').addEventListener('mouseup',   option_4_up, false);
     
+    document.getElementById('trillen').addEventListener('mousedown', trillen_down,  false);
+	document.getElementById('trillen').addEventListener('mouseup',   trillen_up, false);
+    
     //Event listeners voor touch
     document.getElementById('menu_button').addEventListener('touchstart', menu_down,  false);
 	document.getElementById('menu_button').addEventListener('touchend',   menu_up, false);
@@ -32,9 +36,18 @@ function onDeviceReady() {
 	document.getElementById('option_4').addEventListener('touchend',   option_4_up, false);
     
     //Andere dingen
-    window.addEventListener("batterystatus", onBatteryStatus, false);
-	window.addEventListener("batterylow", onBatteryLow, false);
-	window.addEventListener("batterycritical", onBatteryCritical, false);
+    console.log(navigator.vibrate);
+}
+
+function trillen_down() {
+	document.getElementById('trillen').className='down';
+    
+    navigator.vibrate(100);
+}
+
+function trillen_up() {
+	document.getElementById('trillen').className='up';
+    
 }
 
 function menu_down() {
@@ -147,22 +160,4 @@ function option_4_up() {
     document.getElementById("menu_page").className="hidePage";
     
     cur_page = "home_page";
-}
-
-function onBatteryStatus(info) {
-    // What to do when onBatteryStatus event happens:
-    document.getElementById('Progress').setAttribute("value", info.level);
-    document.getElementById('Level').innerHTML = info.level;
-    document.getElementById('Plugged').innerHTML = info.isPlugged;
-}
-function onBatteryLow(info) {
-    // What to do when onBatteryLow event happens:
-    document.getElementById('Progress').setAttribute("value", info.level);
-    document.getElementById('Level').innerHTML = info.level;
-    document.getElementById('Plugged').innerHTML = info.isPlugged;
-}
-function onBatteryCritical(info) {
-    // What to do when onBatteryCritical event happens:
-    document.getElementById('Progress').setAttribute("value", info.level);
-    document.getElementById('Level').innerHTML = info.level;
 }

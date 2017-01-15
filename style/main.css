@@ -149,6 +149,23 @@ p{
     color: white;
 }
 
+#trillen{
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    height: 50px;
+    width: 90%;
+	float: left;
+    
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: medium;
+    
+    font-size: 4vw;
+    color: white;
+}
+
 
 button.down{
     background-color: darkgray;
