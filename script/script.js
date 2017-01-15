@@ -31,7 +31,7 @@ function onDeviceReady() {
     document.getElementById('option_4').addEventListener('touchstart', option_4_down,  false);
 	document.getElementById('option_4').addEventListener('touchend',   option_4_up, false);
     
-    var cur_page="home";
+    $(document).on('batterystatus', onBatteryStatus);
 }
 
 function menu_down() {
@@ -144,4 +144,8 @@ function option_4_up() {
     document.getElementById("menu_page").className="hidePage";
     
     cur_page = "home_page";
+}
+
+function onBatteryStatus(power) {
+    $('#Progress').attr('value', power.level);
 }

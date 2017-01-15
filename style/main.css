@@ -21,12 +21,9 @@ section{
 .showPage{
 	display: block;
 }
+
 .hidePage{
 	display: none;
-}
-
-.blurPage{
-    filter: blur(10px);
 }
 
 /* Navigation */
@@ -159,4 +156,10 @@ button.down{
 
 button.up{
     background-color: grey;
+}
+
+progress{
+    float: left;
+    width: 80%;
+    margin-left: 10%;
 }

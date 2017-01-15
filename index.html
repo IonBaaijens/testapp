@@ -4,8 +4,11 @@
 		<title>Spooky Application</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="style/main.css">
+        <script src="phonegap.js"></script> 
 		<script src="script/script.js"></script>
         <script src="script/fastclick.js"></script>
+        <script src="script/jquery-1.11.3.min.js"></script>
+        <script src="script/battery.js"></script> 
 	</head>
 	<body onload="loadScript()">
 		<section class="showPage" id="home_page">
@@ -28,6 +31,8 @@
                 Verder is er niet zo veel speciaals te zien, maar dat hoeft ook niet.
 
             </p>
+            
+             <progress id="Progress" max="100" value="100"></progress><br>
 		</section>
         
         <section class="hidePage" id="option_2_page">
