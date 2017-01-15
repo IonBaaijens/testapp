@@ -199,7 +199,7 @@ function option_4_up() {
 }
 
 function checkBatterij() {
-    document.getElementById("batteryStatusText").innerHTML = status.level;
+    document.getElementById("batteryStatusText").innerHTML = level;
 }
 
 function checkConnectie() {
