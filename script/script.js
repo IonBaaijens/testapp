@@ -22,6 +22,11 @@ function onDeviceReady() {
     
     document.getElementById('trillen').addEventListener('mousedown', trillen_down,  false);
 	document.getElementById('trillen').addEventListener('mouseup',   trillen_up, false);
+    document.getElementById('network').addEventListener('mousedown', network_down,  false);
+	document.getElementById('network').addEventListener('mouseup',   network_up, false);
+    document.getElementById('batterij').addEventListener('mousedown', batterij_down,  false);
+	document.getElementById('batterij').addEventListener('mouseup',   batterij_up, false);
+    
     
     //Event listeners voor touch
     document.getElementById('menu_button').addEventListener('touchstart', menu_down,  false);
@@ -34,6 +39,13 @@ function onDeviceReady() {
 	document.getElementById('option_3').addEventListener('touchend',   option_3_up, false);
     document.getElementById('option_4').addEventListener('touchstart', option_4_down,  false);
 	document.getElementById('option_4').addEventListener('touchend',   option_4_up, false);
+    
+    document.getElementById('trillen').addEventListener('touchstart', trillen_down,  false);
+	document.getElementById('trillen').addEventListener('touchend',   trillen_up, false);
+    document.getElementById('network').addEventListener('touchstart', network_down,  false);
+	document.getElementById('network').addEventListener('touchend',   network_up, false);
+    document.getElementById('batterij').addEventListener('touchstart', batterij_down,  false);
+	document.getElementById('batterij').addEventListener('touchend',   batterij_up, false);
     
     //Andere dingen
     console.log(navigator.vibrate);
@@ -48,6 +60,28 @@ function trillen_down() {
 function trillen_up() {
 	document.getElementById('trillen').className='up';
     
+}
+
+function network_down() {
+	document.getElementById('network').className='down';
+    
+}
+
+function network_up() {
+	document.getElementById('network').className='up';
+    
+    checkConnection();
+}
+
+function batterij_down() {
+	document.getElementById('batterij').className='down';
+    
+}
+
+function batterij_up() {
+	document.getElementById('batterij').className='up';
+    
+    alert("Batterij percentage: " + info.level + "%");
 }
 
 function menu_down() {
@@ -160,4 +194,20 @@ function option_4_up() {
     document.getElementById("menu_page").className="hidePage";
     
     cur_page = "home_page";
+}
+
+function checkConnection() {
+    var networkState = navigator.connection.type;
+ 
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'No network connection';
+ 
+    alert('Connection type: ' + states[networkState]);
 }
