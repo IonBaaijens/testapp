@@ -74,6 +74,7 @@ p{
 /* menu-button */
 #menu_button{
 	background-image: url("../img/hamburger.png");
+    background-color: darkgrey;
     margin: 10px;
     
     height: 50px;
