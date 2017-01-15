@@ -24,8 +24,8 @@ function onDeviceReady() {
 	document.getElementById('trillen').addEventListener('mouseup',   trillen_up, false);
     document.getElementById('network').addEventListener('mousedown', network_down,  false);
 	document.getElementById('network').addEventListener('mouseup',   network_up, false);
-    document.getElementById('battery').addEventListener('mousedown', battery_down,  false);
-	document.getElementById('battery').addEventListener('mouseup',   battery_up, false);
+    document.getElementById('os').addEventListener('mousedown', os_down,  false);
+	document.getElementById('os').addEventListener('mouseup',   os_up, false);
     
     
     //Event listeners voor touch
@@ -44,8 +44,8 @@ function onDeviceReady() {
 	document.getElementById('trillen').addEventListener('touchend',   trillen_up, false);
     document.getElementById('network').addEventListener('touchstart', network_down,  false);
 	document.getElementById('network').addEventListener('touchend',   network_up, false);
-    document.getElementById('battery').addEventListener('touchstart', battery_down,  false);
-	document.getElementById('battery').addEventListener('touchend',   battery_up, false);
+    document.getElementById('os').addEventListener('touchstart', os_down,  false);
+	document.getElementById('os').addEventListener('touchend',   os_up, false);
     
     //Andere dingen
     console.log(navigator.vibrate);
@@ -75,15 +75,15 @@ function network_up() {
     checkConnectie();
 }
 
-function battery_down() {
-	document.getElementById('battery').className='down';
+function os_down() {
+	document.getElementById('os').className='down';
     
 }
 
-function battery_up() {
-	document.getElementById('battery').className='up';
+function os_up() {
+	document.getElementById('os').className='up';
 
-    checkBatterij();
+    checkOS();
 }
 
 function menu_down() {
@@ -198,7 +198,7 @@ function option_4_up() {
     cur_page = "home_page";
 }
 
-function checkBatterij(status) {
+function checkOS(status) {
 
     document.getElementById("batteryStatusText").innerHTML = device.platform;
     
