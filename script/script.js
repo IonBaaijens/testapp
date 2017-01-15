@@ -199,7 +199,16 @@ function option_4_up() {
 }
 
 function checkBatterij(status) {
-    document.getElementById("batteryStatusText").innerHTML = status.level;
+    
+    function onSuccess(heading) {
+        document.getElementById("batteryStatusText").innerHTML = heading.magneticHeading;
+    };
+
+    function onError(error) {
+        document.getElementById("batteryStatusText").innerHTML = error.code;
+    };
+
+    navigator.compass.getCurrentHeading(onSuccess, onError);
 }
 
 function checkConnectie() {
