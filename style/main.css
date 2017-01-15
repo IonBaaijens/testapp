@@ -63,7 +63,7 @@ h2{
 }
 
 h3{
-    margin: 8px 2vw;
+    margin: 20px 2vw;
 	font-family: sans-serif;
 	font-size: 6vw;
 	text-align: center;
@@ -195,7 +195,7 @@ p{
     color: white;
 }
 
-#orientatie{
+#battery{
     margin-top: 2%;
     margin-left: 5%;
     margin-right: 5%;

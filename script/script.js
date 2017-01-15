@@ -24,8 +24,8 @@ function onDeviceReady() {
 	document.getElementById('trillen').addEventListener('mouseup',   trillen_up, false);
     document.getElementById('network').addEventListener('mousedown', network_down,  false);
 	document.getElementById('network').addEventListener('mouseup',   network_up, false);
-    document.getElementById('orientatie').addEventListener('mousedown', orientatie_down,  false);
-	document.getElementById('orientatie').addEventListener('mouseup',   orientatie_up, false);
+    document.getElementById('battery').addEventListener('mousedown', battery_down,  false);
+	document.getElementById('battery').addEventListener('mouseup',   battery_up, false);
     
     
     //Event listeners voor touch
@@ -44,12 +44,13 @@ function onDeviceReady() {
 	document.getElementById('trillen').addEventListener('touchend',   trillen_up, false);
     document.getElementById('network').addEventListener('touchstart', network_down,  false);
 	document.getElementById('network').addEventListener('touchend',   network_up, false);
-    document.getElementById('orientatie').addEventListener('touchstart', orientatie_down,  false);
-	document.getElementById('orientatie').addEventListener('touchend',   orientatie_up, false);
+    document.getElementById('battery').addEventListener('touchstart', battery_down,  false);
+	document.getElementById('battery').addEventListener('touchend',   battery_up, false);
     
     //Andere dingen
     console.log(navigator.vibrate);
     console.log(navigator.compass);
+    console.log(status.level);
 }
 
 function trillen_down() {
@@ -74,15 +75,15 @@ function network_up() {
     checkConnectie();
 }
 
-function orientatie_down() {
-	document.getElementById('orientatie').className='down';
+function battery_down() {
+	document.getElementById('battery').className='down';
     
 }
 
-function orientatie_up() {
-	document.getElementById('orientatie').className='up';
+function battery_up() {
+	document.getElementById('battery').className='up';
 
-    checkOrientatie();
+    checkBatterij();
 }
 
 function menu_down() {
@@ -197,12 +198,8 @@ function option_4_up() {
     cur_page = "home_page";
 }
 
-function checkOrientatie() {
-    navigator.compass.getCurrentHeading(compassSuccess, compassError);
-    
-    function onSucces(heading) {
-        alert("Orientatie: " + heading.magneticHeading);
-    }
+function checkBatterij() {
+    document.getElementById("batteryStatusText").innerHTML = status.level;
 }
 
 function checkConnectie() {
