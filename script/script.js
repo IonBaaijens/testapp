@@ -2,7 +2,7 @@ var cur_page = "home_page";
 var prev_page = "home_page";
 
 function loadScript() {
-	onDeviceReady();
+    document.addEventListener('deviceready', onDeviceReady, false);
 }
 
 function onDeviceReady() {
@@ -151,29 +151,18 @@ function option_4_up() {
 
 function onBatteryStatus(info) {
     // What to do when onBatteryStatus event happens:
-    document.getElementById('Page').className = "bgCyan";
-    document.getElementById('H1').innerHTML = "Battery Status";
     document.getElementById('Progress').setAttribute("value", info.level);
     document.getElementById('Level').innerHTML = info.level;
     document.getElementById('Plugged').innerHTML = info.isPlugged;
 }
 function onBatteryLow(info) {
     // What to do when onBatteryLow event happens:
-    document.getElementById('Page').className = "bgYellow";
-    document.getElementById('H1').innerHTML = "Battery LOW";
     document.getElementById('Progress').setAttribute("value", info.level);
     document.getElementById('Level').innerHTML = info.level;
     document.getElementById('Plugged').innerHTML = info.isPlugged;
 }
 function onBatteryCritical(info) {
     // What to do when onBatteryCritical event happens:
-    document.getElementById('Page').className = "bgRed";
-    document.getElementById('H1').innerHTML = "Battery CRITICAL";
     document.getElementById('Progress').setAttribute("value", info.level);
     document.getElementById('Level').innerHTML = info.level;
-    if(info.isPlugged){
-	    document.getElementById('Plugged').innerHTML = 'Thank you. Plugged in just in time.';
-	}else{
-	    document.getElementById('Plugged').innerHTML = 'Please plug me in before it is to late!';
-	}
 }
