@@ -50,7 +50,7 @@ function onDeviceReady() {
     //Andere dingen
     console.log(navigator.vibrate);
     console.log(navigator.compass);
-    console.log(status.level);
+    console.log(device.cordova);
 }
 
 function trillen_down() {
@@ -199,16 +199,9 @@ function option_4_up() {
 }
 
 function checkBatterij(status) {
+
+    document.getElementById("batteryStatusText").innerHTML = device.platform;
     
-    function onSuccess(heading) {
-        document.getElementById("batteryStatusText").innerHTML = heading.magneticHeading;
-    };
-
-    function onError(error) {
-        document.getElementById("batteryStatusText").innerHTML = error.code;
-    };
-
-    navigator.compass.getCurrentHeading(onSuccess, onError);
 }
 
 function checkConnectie() {
