@@ -147,5 +147,6 @@ function option_4_up() {
 }
 
 function onBatteryStatus(power) {
-    $('#Progress').attr('value', power.level);
+    document.getElementById('Progress').setAttribute("value", info.level);
+    document.getElementById('Level').innerHTML = info.level;
 }
