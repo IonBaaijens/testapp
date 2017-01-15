@@ -217,6 +217,6 @@ function checkConnectie() {
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.CELL]     = 'Cell generic connection';
     states[Connection.NONE]     = 'No network connection';
- 
-    alert('Connection type: ' + states[networkState]);
+    
+    document.getElementById("networkStatusText").innerHTML = states[networkState];
 }
