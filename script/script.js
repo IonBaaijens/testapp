@@ -1,5 +1,5 @@
-var cur_page="home_page";
-var prev_page="home_page";
+var cur_page = "home_page";
+var prev_page = "home_page";
 
 function loadScript() {
 	onDeviceReady();
@@ -32,6 +32,8 @@ function onDeviceReady() {
 	document.getElementById('option_4').addEventListener('touchend',   option_4_up, false);
     
     window.addEventListener("batterystatus", onBatteryStatus, false);
+	window.addEventListener("batterylow", onBatteryLow, false);
+	window.addEventListener("batterycritical", onBatteryCritical, false);
 }
 
 function menu_down() {
@@ -146,7 +148,31 @@ function option_4_up() {
     cur_page = "home_page";
 }
 
-function onBatteryStatus(power) {
+function onBatteryStatus(info) {
+    // What to do when onBatteryStatus event happens:
+    document.getElementById('Page').className = "bgCyan";
+    document.getElementById('H1').innerHTML = "Battery Status";
     document.getElementById('Progress').setAttribute("value", info.level);
     document.getElementById('Level').innerHTML = info.level;
+    document.getElementById('Plugged').innerHTML = info.isPlugged;
+}
+function onBatteryLow(info) {
+    // What to do when onBatteryLow event happens:
+    document.getElementById('Page').className = "bgYellow";
+    document.getElementById('H1').innerHTML = "Battery LOW";
+    document.getElementById('Progress').setAttribute("value", info.level);
+    document.getElementById('Level').innerHTML = info.level;
+    document.getElementById('Plugged').innerHTML = info.isPlugged;
+}
+function onBatteryCritical(info) {
+    // What to do when onBatteryCritical event happens:
+    document.getElementById('Page').className = "bgRed";
+    document.getElementById('H1').innerHTML = "Battery CRITICAL";
+    document.getElementById('Progress').setAttribute("value", info.level);
+    document.getElementById('Level').innerHTML = info.level;
+    if(info.isPlugged){
+	    document.getElementById('Plugged').innerHTML = 'Thank you. Plugged in just in time.';
+	}else{
+	    document.getElementById('Plugged').innerHTML = 'Please plug me in before it is to late!';
+	}
 }
