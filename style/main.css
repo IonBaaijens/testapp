@@ -73,13 +73,14 @@ p{
 
 /* menu-button */
 #menu_button{
-    margin: 10px;
+    margin-left: 5%;
+    margin-top: 5%;
     
     height: 50px;
     width: 75px;
 	float: left;
     
-        font-size: 4vw;
+        font-size: 3vw;
     color: white;
 }
 
@@ -96,7 +97,7 @@ p{
     border-color: lightgrey;
     border-width: medium;
     
-    font-size: 4vw;
+    font-size: 3vw;
     color: white;
 }
 
@@ -113,7 +114,7 @@ p{
     border-color: lightgrey;
     border-width: medium;
     
-    font-size: 4vw;
+    font-size: 3vw;
     color: white;
 }
 
@@ -130,7 +131,7 @@ p{
     border-color: lightgrey;
     border-width: medium;
     
-    font-size: 4vw;
+    font-size: 3vw;
     color: white;
 }
 
@@ -147,7 +148,7 @@ p{
     border-color: lightgrey;
     border-width: medium;
     
-    font-size: 4vw;
+    font-size: 3vw;
     color: white;
 }
 
@@ -164,7 +165,7 @@ p{
     border-color: lightgrey;
     border-width: medium;
     
-    font-size: 4vw;
+    font-size: 3vw;
     color: white;
 }
 
@@ -181,11 +182,11 @@ p{
     border-color: lightgrey;
     border-width: medium;
     
-    font-size: 4vw;
+    font-size: 3vw;
     color: white;
 }
 
-#batterij{
+#orientatie{
     margin-top: 2%;
     margin-left: 5%;
     margin-right: 5%;
@@ -198,7 +199,7 @@ p{
     border-color: lightgrey;
     border-width: medium;
     
-    font-size: 4vw;
+    font-size: 3vw;
     color: white;
 }
 
@@ -209,10 +210,4 @@ button.down{
 
 button.up{
     background-color: lightblue;
-}
-
-progress{
-    float: left;
-    width: 80%;
-    margin-left: 10%;
 }

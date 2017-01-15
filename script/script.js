@@ -24,8 +24,8 @@ function onDeviceReady() {
 	document.getElementById('trillen').addEventListener('mouseup',   trillen_up, false);
     document.getElementById('network').addEventListener('mousedown', network_down,  false);
 	document.getElementById('network').addEventListener('mouseup',   network_up, false);
-    document.getElementById('batterij').addEventListener('mousedown', batterij_down,  false);
-	document.getElementById('batterij').addEventListener('mouseup',   batterij_up, false);
+    document.getElementById('orientatie').addEventListener('mousedown', orientatie_down,  false);
+	document.getElementById('orientatie').addEventListener('mouseup',   orientatie_up, false);
     
     
     //Event listeners voor touch
@@ -44,11 +44,12 @@ function onDeviceReady() {
 	document.getElementById('trillen').addEventListener('touchend',   trillen_up, false);
     document.getElementById('network').addEventListener('touchstart', network_down,  false);
 	document.getElementById('network').addEventListener('touchend',   network_up, false);
-    document.getElementById('batterij').addEventListener('touchstart', batterij_down,  false);
-	document.getElementById('batterij').addEventListener('touchend',   batterij_up, false);
+    document.getElementById('orientatie').addEventListener('touchstart', orientatie_down,  false);
+	document.getElementById('orientatie').addEventListener('touchend',   orientatie_up, false);
     
     //Andere dingen
     console.log(navigator.vibrate);
+    console.log(navigator.compass);
 }
 
 function trillen_down() {
@@ -70,18 +71,18 @@ function network_down() {
 function network_up() {
 	document.getElementById('network').className='up';
     
-    checkConnection();
+    checkConnectie();
 }
 
-function batterij_down() {
-	document.getElementById('batterij').className='down';
+function orientatie_down() {
+	document.getElementById('orientatie').className='down';
     
 }
 
-function batterij_up() {
-	document.getElementById('batterij').className='up';
-    
-    alert("Batterij percentage: " + info.level + "%");
+function orientatie_up() {
+	document.getElementById('orientatie').className='up';
+
+    checkBatterij();
 }
 
 function menu_down() {
@@ -196,18 +197,23 @@ function option_4_up() {
     cur_page = "home_page";
 }
 
-function checkConnection() {
-    var networkState = navigator.connection.type;
+function checkBatterij() {
+    navigator.compass.getCurrentHeading();
+    
+    alert("Orientatie: " + heading.magneticHeading);
+}
+
+function checkConnectie() {
+    var netwerkStatus = navigator.connection.type;
  
-    var states = {};
-    states[Connection.UNKNOWN]  = 'Unknown connection';
-    states[Connection.ETHERNET] = 'Ethernet connection';
-    states[Connection.WIFI]     = 'WiFi connection';
-    states[Connection.CELL_2G]  = 'Cell 2G connection';
-    states[Connection.CELL_3G]  = 'Cell 3G connection';
-    states[Connection.CELL_4G]  = 'Cell 4G connection';
-    states[Connection.CELL]     = 'Cell generic connection';
-    states[Connection.NONE]     = 'No network connection';
+    var status = {};
+    status[Connection.UNKNOWN]  = 'Onbekende connectie';
+    status[Connection.WIFI]     = 'WiFi connectie';
+    status[Connection.CELL_2G]  = '2g connectie';
+    states[Connection.CELL_3G]  = '3g connectie';
+    status[Connection.CELL_4G]  = '4g connectie';
+    status[Connection.CELL]     = 'Draadloze connectie';
+    status[Connection.NONE]     = 'Geen netwerk connectie';
  
-    alert('Connection type: ' + states[networkState]);
+    alert('Connectie soort: ' + status[netwerkStatus]);
 }
