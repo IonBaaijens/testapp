@@ -1,10 +1,16 @@
+// Variabelen die ik ik gebruikt heb voor de navigatie
+
 var cur_page = "home_page";
 var prev_page = "home_page";
 
+
+// Functie om alles te laten laden
+
 function loadScript() {
-    //document.addEventListener('deviceready', onDeviceReady, false);
     onDeviceReady();
 }
+
+// Device ready / alles klaarmaken
 
 function onDeviceReady() {
     
@@ -53,6 +59,8 @@ function onDeviceReady() {
     console.log(device.cordova);
 }
 
+// Knoppen voor de device features
+
 function trillen_down() {
 	document.getElementById('trillen').className='down';
     
@@ -85,6 +93,8 @@ function os_up() {
 
     checkOS();
 }
+
+// Knoppen voor de navigatie
 
 function menu_down() {
 	document.getElementById('menu_button').className='down';
@@ -198,9 +208,11 @@ function option_4_up() {
     cur_page = "home_page";
 }
 
+// Functies voor de device features
+
 function checkOS(status) {
 
-    document.getElementById("batteryStatusText").innerHTML = device.platform;
+    document.getElementById("osText").innerHTML = device.platform;
     
 }
 
@@ -208,14 +220,13 @@ function checkConnectie() {
     var networkState = navigator.connection.type;
  
     var states = {};
-    states[Connection.UNKNOWN]  = 'Unknown connection';
-    states[Connection.ETHERNET] = 'Ethernet connection';
-    states[Connection.WIFI]     = 'WiFi connection';
-    states[Connection.CELL_2G]  = 'Cell 2G connection';
-    states[Connection.CELL_3G]  = 'Cell 3G connection';
-    states[Connection.CELL_4G]  = 'Cell 4G connection';
-    states[Connection.CELL]     = 'Cell generic connection';
-    states[Connection.NONE]     = 'No network connection';
+    states[Connection.UNKNOWN]  = 'Onbekende connectie';
+    states[Connection.WIFI]     = 'WiFi connectie';
+    states[Connection.CELL_2G]  = 'Cellular 2G connectie';
+    states[Connection.CELL_3G]  = 'Cellular 3G connectie';
+    states[Connection.CELL_4G]  = 'Cellular 4G connectie';
+    states[Connection.CELL]     = 'Cellular connectie';
+    states[Connection.NONE]     = 'Geen netwerk connectie';
     
     document.getElementById("networkStatusText").innerHTML = states[networkState];
 }

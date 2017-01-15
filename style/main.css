@@ -1,4 +1,5 @@
-/* General */
+/* Algemene dingen */
+
 *{
 	margin: 0;
 	border-style: none;
@@ -10,7 +11,8 @@ body{
 	background-color: grey;
 }
 
-/* Pages */
+/* Pagina's */
+
 section{
 	position: fixed;
 	top:0;
@@ -18,6 +20,7 @@ section{
 	height: 100vh;
 	width: 100vw;
 }
+
 .showPage{
 	display: block;
 }
@@ -26,24 +29,16 @@ section{
 	display: none;
 }
 
-/* Navigation */
+/* Navigatie */
+
 nav{
 	position: fixed;
 	width: 100%;
 	height: 50px;
 }
 
-/* Content */
-
-button{
-	display: block;
-	background-repeat: no-repeat;
-	background-position: center;
-    background-color: grey;
-    
-}
-
 /* pagina titel */
+
 h1{
     margin: 8px 2vw;
 	font-family: sans-serif;
@@ -52,7 +47,8 @@ h1{
 	color: white;
 }
 
-/* pagina sub-titel */
+/* pagina sub-titels */
+
 h2{
     margin: 8px 2vw;
 	font-family: sans-serif;
@@ -80,7 +76,24 @@ p{
 	color: white;
 }
 
-/* menu-button */
+/* knoppen */
+
+button{
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+    background-color: grey;
+    
+}
+
+button.down{
+    background-color: darkgray;
+}
+
+button.up{
+    background-color: lightblue;
+}
+
 #menu_button{
     margin-left: 5%;
     margin-top: 5%;
@@ -210,13 +223,4 @@ p{
     
     font-size: 3vw;
     color: white;
-}
-
-
-button.down{
-    background-color: darkgray;
-}
-
-button.up{
-    background-color: lightblue;
 }
