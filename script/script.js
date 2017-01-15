@@ -206,16 +206,17 @@ function checkOrientatie() {
 }
 
 function checkConnectie() {
-    var netwerkStatus = navigator.connection.type;
+    var networkState = navigator.connection.type;
  
-    var nwstatus = {};
-    nwstatus[Connection.UNKNOWN]  = 'Onbekende connectie';
-    nwstatus[Connection.WIFI]     = 'WiFi connectie';
-    nwstatus[Connection.CELL_2G]  = '2g connectie';
-    nwstatus[Connection.CELL_3G]  = '3g connectie';
-    nwstatus[Connection.CELL_4G]  = '4g connectie';
-    nwstatus[Connection.CELL]     = 'Draadloze connectie';
-    stanwstatustus[Connection.NONE]     = 'Geen netwerk connectie';
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'No network connection';
  
-    alert('Connectie soort: ' + nwstatus[netwerkStatus]);
+    alert('Connection type: ' + states[networkState]);
 }
