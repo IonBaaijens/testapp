@@ -8,7 +8,6 @@ function loadScript() {
 function onDeviceReady() {
     
     //Event listeners voor muis
-    
 	document.getElementById('menu_button').addEventListener('mousedown', menu_down,  false);
 	document.getElementById('menu_button').addEventListener('mouseup',   menu_up, false);
     document.getElementById('option_1').addEventListener('mousedown', option_1_down,  false);
@@ -20,6 +19,7 @@ function onDeviceReady() {
     document.getElementById('option_4').addEventListener('mousedown', option_4_down,  false);
 	document.getElementById('option_4').addEventListener('mouseup',   option_4_up, false);
     
+    //Event listeners voor touch
     document.getElementById('menu_button').addEventListener('touchstart', menu_down,  false);
 	document.getElementById('menu_button').addEventListener('touchend',   menu_up, false);
     document.getElementById('option_1').addEventListener('touchstart', option_1_down,  false);
@@ -31,6 +31,7 @@ function onDeviceReady() {
     document.getElementById('option_4').addEventListener('touchstart', option_4_down,  false);
 	document.getElementById('option_4').addEventListener('touchend',   option_4_up, false);
     
+    //Andere dingen
     window.addEventListener("batterystatus", onBatteryStatus, false);
 	window.addEventListener("batterylow", onBatteryLow, false);
 	window.addEventListener("batterycritical", onBatteryCritical, false);
