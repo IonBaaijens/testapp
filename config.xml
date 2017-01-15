@@ -22,6 +22,6 @@
 	<icon src="icon.png" /> <!-- 128x128 -->
 	<splash src="splash.png" /> <!-- 320x480 -->
 
-    //Addons
     <plugin name="cordova-plugin-battery-status" spec="~1.2.0" />
+    
 </widget>
